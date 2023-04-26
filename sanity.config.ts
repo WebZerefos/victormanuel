@@ -7,7 +7,7 @@ const config = defineConfig({
 	projectId: "yatrgxqm",
 	dataset: "production",
 	title: "My Personal Portfolio 2023",
-	apiversion: "2023-03-04",
+	apiVersion: "2023-03-04",
 	basePath: "/admin",
 	plugins: [deskTool(), visionTool()],
 	schema: { types: schemas },

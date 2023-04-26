@@ -18,7 +18,7 @@ const project = {
 			name: "image",
 			title: "Image",
 			type: "image",
-			options: { hotspot: "true" },
+			options: { hotspot: true },
 			fields: [
 				{
 					name: "alt",
@@ -33,7 +33,7 @@ const project = {
 			type: "url",
 		},
 		{
-			name: "Content",
+			name: "content",
 			title: "Content",
 			type: "array",
 			of: [{ type: "block" }],
