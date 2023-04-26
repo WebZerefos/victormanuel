@@ -1,5 +1,6 @@
 import Link from "next/link"
 import "../globals.css"
+export const revalidate = 60
 
 export const metadata = {
 	title: "Create Next App",
