@@ -4,6 +4,7 @@ import Link from "next/link"
 
 const Home = async () => {
 	const projects = await getProjects()
+
 	return (
 		<div>
 			<div className='text-5xl font-extrabold'>Olá meu nome é Victor.</div>
