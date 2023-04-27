@@ -1,5 +1,6 @@
 import Link from "next/link"
 import "../globals.css"
+import Navbar from "@/components/NavBar"
 export const revalidate = 60
 
 export const metadata = {
@@ -10,16 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='en'>
-			<body className='max-w-3xl mx-auto py-10'>
-				<header>
-					<Link
-						href={"/"}
-						className='text-lg font-bold'
-					>
-						Home
-					</Link>
+			<body>
+				<header className='w-full'>
+					<Navbar />
 				</header>
-				<main className='py-20'>{children}</main>
+				<div className='max-w-7xl mx-auto py-10'>
+					<main className='py-20'>{children}</main>
+				</div>
 			</body>
 		</html>
 	)

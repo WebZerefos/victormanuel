@@ -1,5 +1,5 @@
 const config = {
-	projectId: "yatrgxqm",
+	projectId: "kzw3qm4y",
 	dataset: "production",
 	title: "My Personal Portfolio 2023",
 	apiVersion: "2023-03-04",
