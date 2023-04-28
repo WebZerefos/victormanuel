@@ -32,15 +32,21 @@ function Navbar() {
 	const handleClick = () => {}
 
 	return (
-		<section className='bg-slate-50 w-full h-20 lg:h-[8vh] fixed top-0 z-50  px-4 drop-shadow-lg'>
-			<div className='w-full h-full py-1 font-titleFont flex items-center justify-between'>
-				<div></div>
+		<section className='bg-slate-50 w-full h-20 lg:h-[8vh] fixed top-0 z-50 px-4 drop-shadow-lg'>
+			<div className='max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between'>
+				<Link href={"/"}>
+					<Image
+						src={logoImg}
+						alt='logo'
+						className='w-14 md:w-20 rounded-full drop-shadow-md '
+					/>
+				</Link>
 				<div className='hidden md:inline-flex items-center gap-12 '>
 					<ul className='flex gap-12 text-md'>
 						<Link
 							href={"#home"}
 							onClick={onClickScroll}
-							className='flex items-center gap-1 font-medium  cursor-pointer duration-300 nav-link'
+							className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link hover:scale-105 transition '
 						>
 							<li>Home</li>
 						</Link>
@@ -48,7 +54,7 @@ function Navbar() {
 						<Link
 							href={"#about"}
 							onClick={onClickScroll}
-							className='flex items-center gap-1 font-medium  cursor-pointer duration-300 nav-link'
+							className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link hover:scale-105 transition '
 						>
 							<li>Sobre</li>
 						</Link>
@@ -56,14 +62,14 @@ function Navbar() {
 						<Link
 							href={"#project"}
 							onClick={onClickScroll}
-							className='flex items-center gap-1 font-medium  cursor-pointer duration-300 nav-link'
+							className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link hover:scale-105 transition '
 						>
 							<li>Projetos</li>
 						</Link>
 						<Link
 							href={"#contact"}
 							onClick={onClickScroll}
-							className='flex items-center gap-1 font-medium  cursor-pointer duration-300 nav-link'
+							className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link hover:scale-105 transition '
 						>
 							<li>Contato</li>
 						</Link>
@@ -72,17 +78,19 @@ function Navbar() {
 						href='resume.pdf'
 						target='_blank'
 					>
-						<button className='px-4 py-2 rounded-md  text-md border border-designColor'>Resume</button>
+						<button className='px-4 py-2 rounded-md  hover:text-designColor  text-md border border-slate-500 hover:border-designColor hover:scale-105 transition-all'>
+							Resume
+						</button>
 					</a>
 				</div>
 				{/* hamburger icon  */}
 				<div
 					onClick={() => setShowMenu(true)}
-					className='w-8 h-5 flex flex-col justify-between items-center mdl:hidden text-4xl text-designColor cursor-pointer overflow-hidden group'
+					className='w-6 h-5 flex flex-col justify-between items-center mdl:hidden text-4xl text-designColor cursor-pointer overflow-hidden group'
 				>
-					<span className='w-full h-[2px] bg-slate-500 inline-flex transform group-hover:translate-x-3 transition-all ease-in-out duration-300'></span>
-					<span className='w-full h-[2px] bg-slate-500 inline-flex transform group-hover:translate-x-4 transition-all ease-in-out duration-300'></span>
-					<span className='w-full h-[2px] bg-slate-500 inline-flex transform group-hover:translate-x-3 transition-all ease-in-out duration-300'></span>
+					<span className='w-full h-[2px] bg-slate-500 inline-flex transform group-hover:translate-x-2 transition-all ease-in-out duration-300'></span>
+					<span className='w-full h-[2px] bg-slate-500 inline-flex transform translate-x-3 group-hover:translate-x-0 transition-all ease-in-out duration-300'></span>
+					<span className='w-full h-[2px] bg-slate-500 inline-flex transform translate-x-1 group-hover:translate-x-3 transition-all ease-in-out duration-300'></span>
 				</div>
 
 				{/* SIDE MENU */}
