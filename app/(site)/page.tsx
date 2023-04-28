@@ -90,7 +90,7 @@ const Home = async () => {
 							>
 								{project.image && (
 									<Image
-										src={project.thumb}
+										src={project.imageThumb}
 										alt={project.alt}
 										width={750}
 										height={300}
