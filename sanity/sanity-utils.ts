@@ -12,9 +12,8 @@ export const getProjects = async (): Promise<Project[]> => {
       _createdAt,
       name,
       'slug': slug.current,
+      'thumb': imageThumb.asset->url,
       'image': image.asset->url,
-      url,
-      content,
     }
     `
 	)
@@ -27,10 +26,13 @@ export const getProject = async (slug: string): Promise<Project> => {
       _id,
       _createdAt,
       name,
+      platform,
       'slug': slug.current,
       'image': image.asset->url,
       url,
       content,
+      'technologies': technology[]-> technology
+        
     }`,
 		{ slug }
 	)

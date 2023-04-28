@@ -9,10 +9,28 @@ const project = {
 			type: "string",
 		},
 		{
+			name: "platform",
+			title: "Platform",
+			type: "string",
+		},
+		{
 			name: "slug",
 			title: "Slug",
 			type: "slug",
 			options: { source: "name" },
+		},
+		{
+			name: "imageThumb",
+			title: "ImageThumb",
+			type: "image",
+			options: { hotspot: true },
+			fields: [
+				{
+					name: "alt",
+					title: "Alt",
+					type: "string",
+				},
+			],
 		},
 		{
 			name: "image",
@@ -37,6 +55,12 @@ const project = {
 			title: "Content",
 			type: "array",
 			of: [{ type: "block" }],
+		},
+		{
+			name: "technology",
+			title: "Technologies",
+			type: "array",
+			of: [{ type: "reference", to: { type: "technology" } }],
 		},
 	],
 }

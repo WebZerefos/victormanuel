@@ -16,7 +16,7 @@ const Project = async ({ params }: Props) => {
 	return (
 		<div className='max-w-container mx-auto lgl:px-40 py-40'>
 			<div className='px-4'>
-				<Title title={project.name} />
+				<Title title={project.platform} />
 			</div>
 			<div className='w-full flex flex-col items-center justify-center gap-28 mt-10 px-4'>
 				<div className='flex flex-col xl:flex-row gap-6'>
@@ -37,11 +37,9 @@ const Project = async ({ params }: Props) => {
 							reprehenderit unde esse soluta sint quia! Blanditiis deleniti sint laboriosam exercitationem magni odit.
 						</p>
 						<ul className='text-xs md:text-sm font-titleFont font-semibold tracking-wide flex gap-2 md:gap-3 justify-between text-slate-500'>
-							<li>NextJs</li>
-							<li>TypeScript</li>
-							<li>Next-auth</li>
-							<li>Stripe</li>
-							<li>Vercel Deployment</li>
+							{project.technologies.map((tech, i) => (
+								<li key={i}>{tech}</li>
+							))}
 						</ul>
 						<div className='text-2xl flex gap-4 text-white'>
 							<a
