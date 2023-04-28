@@ -78,7 +78,7 @@ const Home = async () => {
 					{/* projects */}
 					<section
 						id='project'
-						className='max-w-container mx-auto lgl:px-20 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-20'
+						className='max-w-container mx-auto lgl:px-20 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-20 boxShadow'
 					>
 						{projects.map((project) => (
 							<Link

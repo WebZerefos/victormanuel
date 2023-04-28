@@ -2,6 +2,8 @@ import { getProject } from "@/sanity/sanity-utils"
 import React from "react"
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
+import Title from "@/components/Title"
+import { RiGithubLine } from "react-icons/ri"
 
 type Props = {
 	params: { project: string }
@@ -12,55 +14,49 @@ const Project = async ({ params }: Props) => {
 	const project = await getProject(slug)
 
 	return (
-		<div className='flex flex-col lgl:flex-row gap-6 p-20 mt-20'>
-			<div className='w-full lgl:w-2/3 text-base text-slate-800 font-medium flex-col gap-4'>
-				<header className='flex justify-between items-center '>
-					<h1 className='text-4xl font-bold drop-shadow bg-gradient-to-r  from-slate-400 via-slate-500 to-slate-600 bg-clip-text text-transparent '>
-						{project.name}
-					</h1>
-					<a
-						href={project.url}
-						title='veja o projeto'
-						target='_blank'
-						rel='noopener noreferrer'
-						className='bg-slate-100 rounded-lg py-3 px-4 whitespace-nowrap text-slate-500 font-bold hover:scale-105 transition duration-300'
-					>
-						veja o projeto
-					</a>
-				</header>
-				<div className='w-full lgl:w-1/3 h-80 relative group'>
-					<div className=''>
+		<div className='max-w-container mx-auto lgl:px-40 py-40'>
+			<div className='px-4'>
+				<Title title={project.name} />
+			</div>
+			<div className='w-full flex flex-col items-center justify-center gap-28 mt-10 px-4'>
+				<div className='flex flex-col xl:flex-row gap-6'>
+					<div className='w-full xl:w-1/2 h-auto relative group'>
 						<Image
 							src={project.image}
 							alt={project.alt}
-							width={1920}
-							height={1080}
-							className='mt-10 border-2 border-slate-300 object-cover rounded-xl'
+							width={1440}
+							height={300}
+							className='shadow-lg rounded-lg'
 						/>
 					</div>
-					<p className='leading-loose w-full text-justify'>
-						<div className='text-lg text-slate-500 mt-5'>
-							<PortableText value={project.content} />
+					<div className='w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-end text-right xl:-ml-16 z-10'>
+						<p className='font-titleFont text-designColor text-sm tracking-wide'>Featured Project</p>
+						<h3 className='text-2xl font-bold'>{project.name}</h3>
+						<p className='bg-slate-500 drop-shadow-lg text-sm md:text-base p-2 md:p-6 rounded-md text-slate-200 text-justify'>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga iure laboriosam architecto in repellendus impedit inventore, vitae
+							reprehenderit unde esse soluta sint quia! Blanditiis deleniti sint laboriosam exercitationem magni odit.
+						</p>
+						<ul className='text-xs md:text-sm font-titleFont font-semibold tracking-wide flex gap-2 md:gap-3 justify-between text-slate-500'>
+							<li>NextJs</li>
+							<li>TypeScript</li>
+							<li>Next-auth</li>
+							<li>Stripe</li>
+							<li>Vercel Deployment</li>
+						</ul>
+						<div className='text-2xl flex gap-4 text-white'>
+							<a
+								href='https://github.com/WebZerefos'
+								className='hover:scale-125 transition duration-300'
+							>
+								<span className='w-10 h-10 text-xl bg-slate-500 rounded-full inline-flex items-center justify-center drop-shadow-md'>
+									<RiGithubLine />
+								</span>
+							</a>
 						</div>
-					</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	)
 }
-
 export default Project
-
-{
-	/* <div className='max-w-container mx-auto lgl:px-20 py-24 mt-20'> */
-}
-
-{
-	/* content goes here */
-}
-
-{
-	/* image goes here */
-}
-
-// </div>

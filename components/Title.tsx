@@ -7,7 +7,7 @@ type Props = {
 
 function Title({ title }: Props) {
 	return (
-		<h2 className='font-titleFont text-2xl font-semibold flex items-center'>
+		<h2 className='font-titleFont text-2xl font-semibold flex items-center text-slate-600'>
 			<span className='mr-2 text-designColor'>
 				<HiOutlineCode />
 			</span>
