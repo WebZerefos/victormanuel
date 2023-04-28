@@ -10,13 +10,15 @@ import Title from "@/components/Title"
 import { getProjects, getSkills } from "@/sanity/sanity-utils"
 
 import profileImg from "../../public/profile.jpg"
+import Contact from "@/components/Contact"
+import Footer from "@/components/Footer"
 
 const Home = async () => {
 	const skills = await getSkills()
 	const projects = await getProjects()
 
 	return (
-		<main className='w-full h-screen font-bodyFont overflow-x-hidden overflow-y-scroll'>
+		<main>
 			<div className='w-full h-[88vh] xl:flex items-center gap-20 justify-between'>
 				<div className='hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0'>
 					<Leftside />
@@ -69,7 +71,7 @@ const Home = async () => {
 								</div>
 							</div>
 						</div>
-						<span className='self-center py-10'>
+						<span className='hidden md:inline-flex self-center py-10'>
 							<BsFillArrowDownCircleFill className='w-12 h-12 animate-bounce text-designColor' />
 						</span>
 					</section>
@@ -100,7 +102,9 @@ const Home = async () => {
 						))}
 					</section>
 					{/* contacy */}
+					<Contact />
 					{/* footer */}
+					<Footer />
 				</div>
 				<div className='hidden xl:inline-flex w-32 h-full fixed right-0 bottom-0'>
 					<RightSitde />

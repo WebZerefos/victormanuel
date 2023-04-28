@@ -111,14 +111,14 @@ function Navbar() {
 									<Link
 										href={"#home"}
 										onClick={onClickScroll}
-										className='flex items-center gap-1 font-medium text-lightText hover:text-designColor cursor-pointer duration-300 nav-link'
+										className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link'
 									>
 										<li>Home</li>
 									</Link>
 									<Link
 										href={"#about"}
 										onClick={onClickScroll}
-										className='flex items-center gap-1 font-medium text-lightText hover:text-designColor cursor-pointer duration-300 nav-link'
+										className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link'
 									>
 										<li>About</li>
 									</Link>
@@ -126,14 +126,14 @@ function Navbar() {
 									<Link
 										href={"#project"}
 										onClick={onClickScroll}
-										className='flex items-center gap-1 font-medium text-lightText hover:text-designColor cursor-pointer duration-300 nav-link'
+										className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link'
 									>
 										<li>Projects</li>
 									</Link>
 									<Link
 										href={"#contact"}
 										onClick={onClickScroll}
-										className='flex items-center gap-1 font-medium text-lightText hover:text-designColor cursor-pointer duration-300 nav-link'
+										className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link'
 									>
 										<li>Contacts</li>
 									</Link>
@@ -145,36 +145,51 @@ function Navbar() {
 								>
 									<button className='px-4 w-32 py-2 rounded-md text-designColor text-xs border border-designColor'>Resume</button>
 								</a>
-								<div className='flex gap-2'>
-									<a href='https://github.com/WebZerefos'>
-										<span className='w-10 h-10 text-xl bg-slate-700 rounded-full inline-flex items-center justify-center hover:text-designColor cursor-pointer hover:-translate-y2 transition-all duration-300'>
+								<div className='flex gap-2 text-white'>
+									<a
+										href='https://github.com/WebZerefos'
+										className='hover:scale-125 transition duration-300'
+									>
+										<span className='w-10 h-10 text-xl bg-slate-500 rounded-full inline-flex items-center justify-center drop-shadow-md'>
 											<RiGithubLine />
 										</span>
 									</a>
-									<a href='https://linkedin.com/in/victor-zerefos-aaa35297'>
-										<span className='w-10 h-10 text-xl bg-slate-700 rounded-full inline-flex items-center justify-center hover:text-designColor cursor-pointer hover:-translate-y2 transition-all duration-300'>
+									<a
+										href='https://linkedin.com/in/victor-zerefos-aaa35297'
+										className='hover:scale-125 transition duration-300'
+									>
+										<span className='w-10 h-10 text-xl bg-slate-500 rounded-full inline-flex items-center justify-center drop-shadow-md'>
 											<TfiLinkedin />
 										</span>
 									</a>
-									<a href='https://instagram.com/victorzerefos?igshid=YmMyMTA2M2Y='>
-										<span className='w-10 h-10 text-xl bg-slate-700 rounded-full inline-flex items-center justify-center hover:text-designColor cursor-pointer hover:-translate-y2 transition-all duration-300'>
+									<a
+										href='https://instagram.com/victorzerefos?igshid=YmMyMTA2M2Y='
+										className='hover:scale-125 transition duration-300'
+									>
+										<span className='w-10 h-10 text-xl bg-slate-500 rounded-full inline-flex items-center justify-center drop-shadow-md'>
 											<TfiInstagram />
 										</span>
 									</a>
-									<a href='https://www.facebook.com/victorzerefos?mibextid=LQQJ4d'>
-										<span className='w-10 h-10 text-xl bg-slate-700 rounded-full inline-flex items-center justify-center hover:text-designColor cursor-pointer hover:-translate-y2 transition-all duration-300'>
+									<a
+										href='https://www.facebook.com/victorzerefos?mibextid=LQQJ4d'
+										className='hover:scale-125 transition duration-300'
+									>
+										<span className='w-10 h-10 text-xl bg-slate-500 rounded-full inline-flex items-center justify-center drop-shadow-md'>
 											<TfiFacebook />
 										</span>
 									</a>
-									<a href='https://twitter.com/onlyzerefos'>
-										<span className='w-10 h-10 text-xl bg-slate-700 rounded-full inline-flex items-center justify-center hover:text-designColor cursor-pointer hover:-translate-y2 transition-all duration-300'>
+									<a
+										href='https://twitter.com/onlyzerefos'
+										className='hover:scale-125 transition duration-300'
+									>
+										<span className='w-10 h-10 text-xl bg-slate-500 rounded-full inline-flex items-center justify-center drop-shadow-md'>
 											<TfiTwitter />
 										</span>
 									</a>
 								</div>
-								<div className='self-center  items-center justify-center'>
+								<div className='self-center items-center justify-center -mt-6 '>
 									<a href='mailto:victor.zerefos@gmail.com'>
-										<p className='text-md  tracking-wide text-slate-500'>victor.zerefos@gmail.com</p>
+										<p className='text-md tracking-wide text-slate-500'>victor.zerefos@gmail.com</p>
 									</a>
 								</div>
 							</div>

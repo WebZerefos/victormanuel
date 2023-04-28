@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='en'>
-			<body>
+			<body className='w-full h-screen font-bodyFont  overflow-x-hidden overflow-y-scroll'>
 				<header>
 					<Navbar />
 				</header>
