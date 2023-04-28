@@ -12,7 +12,7 @@ export const getProjects = async (): Promise<Project[]> => {
       _createdAt,
       name,
       'slug': slug.current,
-      'thumb': imageThumb.asset->url,
+      'imageThumb': imageThumb.asset->url,
       'image': image.asset->url,
     }
     `
