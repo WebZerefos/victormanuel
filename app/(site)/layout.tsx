@@ -1,7 +1,7 @@
 import Link from "next/link"
 import "../globals.css"
 import Navbar from "@/components/NavBar"
-export const revalidate = 60
+export const revalidate = 30
 
 export const metadata = {
 	title: "Victor Manuel",
