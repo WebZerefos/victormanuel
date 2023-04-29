@@ -80,13 +80,13 @@ const Home = async () => {
 					{/* projects */}
 					<section
 						id='project'
-						className='max-w-container mx-auto lgl:px-20 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-20 boxShadow'
+						className='max-w-container mx-auto lgl:px-20 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-20'
 					>
 						{projects.map((project) => (
 							<Link
 								href={`/projects/${project.slug}`}
 								key={project._id}
-								className='border rounded-lg p-1 shadow-sm hover:scale-105 transition duration-500 hover:border-orange-200'
+								className='border rounded-[10px] p-1 shadow-lg hover:scale-105 transition duration-500 hover:border-orange-200'
 							>
 								{project.image && (
 									<Image
@@ -94,10 +94,10 @@ const Home = async () => {
 										alt={project.alt}
 										width={750}
 										height={300}
-										className='object-cover rounded-lg'
+										className='object-cover rounded-[10px]'
 									/>
 								)}
-								<div className='mt-3 font-extrabold'>{project.name}</div>
+								<div className='mt-3 font-extrabold text-slate-600 flex justify-center font-titleFont tracking-wider'>{project.name}</div>
 							</Link>
 						))}
 					</section>

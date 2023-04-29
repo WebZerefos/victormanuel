@@ -14,8 +14,6 @@ const Project = async ({ params }: Props) => {
 	const project = await getProject(slug)
 	const technologies = project.technologies
 
-	console.log(technologies)
-
 	return (
 		<div className='max-w-container mx-auto lgl:px-40 py-40'>
 			<div className='px-4'>
@@ -29,13 +27,13 @@ const Project = async ({ params }: Props) => {
 							alt={project.alt}
 							width={1440}
 							height={300}
-							className='shadow-lg rounded-lg'
+							className='shadow-2xl rounded-[20px]'
 						/>
 					</div>
 					<div className='w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-end text-right xl:-ml-16 z-10'>
 						<p className='font-titleFont text-designColor text-sm tracking-wide'>Featured Project</p>
-						<h3 className='text-2xl font-bold'>{project.name}</h3>
-						<p className='bg-slate-500 drop-shadow-lg text-sm md:text-base p-2 md:p-6 rounded-md text-slate-200 text-justify'>
+						<h3 className='text-2xl font-bold text-slate-600 drop-shadow-md'>{project.name}</h3>
+						<p className='bg-slate-500 shadow-2xl text-sm md:text-base p-2 md:p-6 rounded-md text-slate-200 text-justify'>
 							<PortableText value={project.content} />
 						</p>
 						<ul className='text-xs md:text-sm font-titleFont font-semibold tracking-wide flex gap-2 md:gap-3 justify-between text-slate-500'>

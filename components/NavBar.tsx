@@ -74,14 +74,6 @@ function Navbar() {
 							<li>Contato</li>
 						</Link>
 					</ul>
-					<a
-						href='resume.pdf'
-						target='_blank'
-					>
-						<button className='px-4 py-2 rounded-md  hover:text-designColor  text-md border border-slate-500 hover:border-designColor hover:scale-105 transition-all'>
-							Resume
-						</button>
-					</a>
 				</div>
 				{/* hamburger icon  */}
 				<div
@@ -120,7 +112,7 @@ function Navbar() {
 										onClick={onClickScroll}
 										className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link'
 									>
-										<li>About</li>
+										<li>Sobre</li>
 									</Link>
 
 									<Link
@@ -128,23 +120,16 @@ function Navbar() {
 										onClick={onClickScroll}
 										className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link'
 									>
-										<li>Projects</li>
+										<li>Projetos</li>
 									</Link>
 									<Link
 										href={"#contact"}
 										onClick={onClickScroll}
 										className='flex items-center gap-1 font-medium text-slate-500 hover:text-designColor cursor-pointer duration-300 nav-link'
 									>
-										<li>Contacts</li>
+										<li>Contato</li>
 									</Link>
 								</ul>
-
-								<a
-									href='resume.pdf'
-									target='_blank'
-								>
-									<button className='px-4 w-32 py-2 rounded-md text-designColor text-xs border border-designColor'>Resume</button>
-								</a>
 								<div className='flex gap-2 text-white'>
 									<a
 										href='https://github.com/WebZerefos'
