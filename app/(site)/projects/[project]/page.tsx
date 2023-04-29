@@ -1,9 +1,10 @@
 import { getProject } from "@/sanity/sanity-utils"
-import React from "react"
+
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 import Title from "@/components/Title"
 import { RiGithubLine } from "react-icons/ri"
+import { Technology } from "@/types/Technology"
 
 type Props = {
 	params: { project: string }
@@ -12,8 +13,9 @@ type Props = {
 const Project = async ({ params }: Props) => {
 	const slug = params.project
 	const project = await getProject(slug)
+	const technologies = project.technologies
 
-	console.log(project.technologies)
+	console.log(technologies)
 
 	return (
 		<div className='max-w-container mx-auto lgl:px-40 py-40'>
@@ -39,9 +41,7 @@ const Project = async ({ params }: Props) => {
 							reprehenderit unde esse soluta sint quia! Blanditiis deleniti sint laboriosam exercitationem magni odit.
 						</p>
 						<ul className='text-xs md:text-sm font-titleFont font-semibold tracking-wide flex gap-2 md:gap-3 justify-between text-slate-500'>
-							{project.technologies.map((technology, _id) => (
-								<li key={_id}>{technology}</li>
-							))}
+							{technologies && technologies.map((tech, key) => <li key={key}>{tech}</li>)}
 						</ul>
 						<div className='text-2xl flex gap-4 text-white'>
 							<a

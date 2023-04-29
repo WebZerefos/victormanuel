@@ -32,7 +32,6 @@ export const getProject = async (slug: string): Promise<Project> => {
       url,
       content,
       'technologies': technology[]-> technology
-        
     }`,
 		{ slug }
 	)

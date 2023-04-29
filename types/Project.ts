@@ -12,5 +12,4 @@ export type Project = {
 	alt: string
 	url: string
 	content: PortableTextBlock[]
-	technologies: Technology[]
 }
