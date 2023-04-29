@@ -4,7 +4,6 @@ import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 import Title from "@/components/Title"
 import { RiGithubLine } from "react-icons/ri"
-import { Technology } from "@/types/Technology"
 
 type Props = {
 	params: { project: string }
@@ -14,6 +13,8 @@ const Project = async ({ params }: Props) => {
 	const slug = params.project
 	const project = await getProject(slug)
 	const technologies = project.technologies
+
+	console.log(technologies)
 
 	return (
 		<div className='max-w-container mx-auto lgl:px-40 py-40'>
@@ -35,8 +36,7 @@ const Project = async ({ params }: Props) => {
 						<p className='font-titleFont text-designColor text-sm tracking-wide'>Featured Project</p>
 						<h3 className='text-2xl font-bold'>{project.name}</h3>
 						<p className='bg-slate-500 drop-shadow-lg text-sm md:text-base p-2 md:p-6 rounded-md text-slate-200 text-justify'>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga iure laboriosam architecto in repellendus impedit inventore, vitae
-							reprehenderit unde esse soluta sint quia! Blanditiis deleniti sint laboriosam exercitationem magni odit.
+							<PortableText value={project.content} />
 						</p>
 						<ul className='text-xs md:text-sm font-titleFont font-semibold tracking-wide flex gap-2 md:gap-3 justify-between text-slate-500'>
 							{technologies && technologies.map((tech, key) => <li key={key}>{tech}</li>)}
