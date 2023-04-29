@@ -60,7 +60,7 @@ const project = {
 			name: "technology",
 			title: "Technologies",
 			type: "array",
-			of: [{ type: "reference", to: { type: "technology" } }],
+			of: [{ type: "reference", to: "technology" }],
 		},
 	],
 }

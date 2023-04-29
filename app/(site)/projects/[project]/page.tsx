@@ -37,9 +37,9 @@ const Project = async ({ params }: Props) => {
 							reprehenderit unde esse soluta sint quia! Blanditiis deleniti sint laboriosam exercitationem magni odit.
 						</p>
 						<ul className='text-xs md:text-sm font-titleFont font-semibold tracking-wide flex gap-2 md:gap-3 justify-between text-slate-500'>
-							{project.technologies.map((tech, i) => (
+							{/* {project.technologies.map((tech, i) => (
 								<li key={i}>{tech}</li>
-							))}
+							))} */}
 						</ul>
 						<div className='text-2xl flex gap-4 text-white'>
 							<a
