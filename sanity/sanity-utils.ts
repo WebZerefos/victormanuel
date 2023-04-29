@@ -31,7 +31,7 @@ export const getProject = async (slug: string): Promise<Project> => {
       'image': image.asset->url,
       url,
       content,
-      'technology': technology[]-> technology
+      'technologies': technology[]-> technology
         
     }`,
 		{ slug }

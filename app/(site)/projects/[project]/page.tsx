@@ -13,6 +13,8 @@ const Project = async ({ params }: Props) => {
 	const slug = params.project
 	const project = await getProject(slug)
 
+	console.log(project.technologies)
+
 	return (
 		<div className='max-w-container mx-auto lgl:px-40 py-40'>
 			<div className='px-4'>
