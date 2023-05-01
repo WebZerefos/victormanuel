@@ -1,4 +1,4 @@
-function RightSitde() {
+function RightSide() {
 	return (
 		<section className='w-full h-full flex flex-col items-center justify-end text-lightText gap-12'>
 			<a href='mailto:victor.zerefos@gmail.com'>
@@ -9,4 +9,4 @@ function RightSitde() {
 	)
 }
 
-export default RightSitde
+export default RightSide
