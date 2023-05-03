@@ -1,17 +1,17 @@
-import Image from "next/image"
-import Link from "next/link"
-import { AiFillThunderbolt } from "react-icons/ai"
-import { BsFillArrowDownCircleFill } from "react-icons/bs"
-import Hero from "@/components/Hero"
-import Leftside from "@/components/Leftside"
-import RightSide from "@/components/Rightside"
-import Title from "@/components/Title"
+import Image from 'next/image'
+import Link from 'next/link'
+import { AiFillThunderbolt } from 'react-icons/ai'
+import { BsFillArrowDownCircleFill } from 'react-icons/bs'
+import Hero from '@/components/Hero'
+import Leftside from '@/components/Leftside'
+import RightSide from '@/components/Rightside'
+import Title from '@/components/Title'
 
-import { getProjects, getSkills } from "@/sanity/sanity-utils"
+import { getProjects, getSkills } from '@/sanity/sanity-utils'
 
-import profileImg from "../../public/profile.jpg"
-import Contact from "@/components/Contact"
-import Footer from "@/components/Footer"
+import profileImg from '../../public/profile.jpg'
+import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 
 const Home = async () => {
 	const skills = await getSkills()
@@ -35,18 +35,30 @@ const Home = async () => {
 						<div className='flex flex-col lgl:flex-row gap-6'>
 							<div className='w-full lgl:w-2/3 text-base text-slate-800 font-medium flex-col gap-4'>
 								<p className='leading-loose w-full text-justify'>
-									Olá, meu nome Victor Manuel Zerefos altamente <span className='text-designColor'>ambicioso</span>,{" "}
-									<span className='text-designColor'>automotivado</span>,{" "}
-									<span className='text-designColor'>ótimo senso de liderança</span> e{" "}
-									<span className='text-designColor'>focado</span> na área de desenvolvimento para desenvolver soluções que possam
-									impactar na vida das pessoas e empresas. Eu me formei na Faculdade Fortium Brasília, em 2014, com bacharelado em
-									Sistemas de Informação e pós graduado em Engenharia de Software. Eu tenho uma grande variedade de hobbies e
-									paixões que me mantêm ocupado. Desde ler, praticar esportes, viajar, eu estou sempre buscando novas experiências
-									para me manter envolvido e aprender coisas novas. Eu acredito que uma pessoa nunca deva parar de crescer e é isso
-									que me esforço a fazer, eu tenho uma paixão por tecnologia e um desejo de sempre ir além dos limites do que é
-									possível. Estou animado para ver aonde minha carreira me leva e estou sempre aberto a novas oportunidades.
+									Olá, meu nome Victor Manuel Zerefos altamente{' '}
+									<span className='text-designColor'>ambicioso</span>,{' '}
+									<span className='text-designColor'>automotivado</span>,{' '}
+									<span className='text-designColor'>
+										ótimo senso de liderança
+									</span>{' '}
+									e <span className='text-designColor'>focado</span> na área de
+									desenvolvimento para desenvolver soluções que possam impactar na
+									vida das pessoas e empresas. Eu me formei na Faculdade Fortium
+									Brasília, em 2014, com bacharelado em Sistemas de Informação e
+									pós graduado em Engenharia de Software. Eu tenho uma grande
+									variedade de hobbies e paixões que me mantêm ocupado. Desde ler,
+									praticar esportes, viajar, eu estou sempre buscando novas
+									experiências para me manter envolvido e aprender coisas novas.
+									Eu acredito que uma pessoa nunca deva parar de crescer e é isso
+									que me esforço a fazer, eu tenho uma paixão por tecnologia e um
+									desejo de sempre ir além dos limites do que é possível. Estou
+									animado para ver aonde minha carreira me leva e estou sempre
+									aberto a novas oportunidades.
 								</p>
-								<p className='py-10'>Aqui estão algumas das tecnologias que venho trabalhando e aprendendo:</p>
+								<p className='py-10'>
+									Aqui estão algumas das tecnologias que venho trabalhando e
+									aprendendo:
+								</p>
 								<ul className='max-w-[450px] grid grid-cols-2 gap-2'>
 									<>
 										{skills.map((skill) => (
@@ -56,7 +68,7 @@ const Home = async () => {
 											>
 												<span className='text-designColor'>
 													<AiFillThunderbolt />
-												</span>{" "}
+												</span>{' '}
 												{skill.skill}
 											</li>
 										))}
@@ -82,15 +94,15 @@ const Home = async () => {
 
 					<section
 						id='project'
-						className='max-w-container mx-auto lgl:px-20 pb-24 gap-8  z-20'
+						className='max-w-container mx-auto lgl:px-32 pb-24 gap-8 z-20'
 					>
 						<Title title='Meus Projetos' />
-						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 '>
+						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6 '>
 							{projects.map((project) => (
 								<Link
 									href={`/projects/${project.slug}`}
 									key={project._id}
-									className='border rounded-[10px] p-1 shadow-lg hover:scale-105 transition duration-500 hover:border-orange-200'
+									className='border rounded-[10px] p-1 shadow-lg hover:scale-105 transition duration-500 hover:border-designColor'
 								>
 									{project.image && (
 										<Image
@@ -101,7 +113,7 @@ const Home = async () => {
 											className='object-cover rounded-[10px]'
 										/>
 									)}
-									<div className='mt-3 font-extrabold text-slate-600 flex justify-center font-titleFont tracking-wider'>
+									<div className='mt-3 font-extrabold text-slate-600 flex justify-center font-titleFont drop-shadow-md'>
 										{project.name}
 									</div>
 								</Link>
