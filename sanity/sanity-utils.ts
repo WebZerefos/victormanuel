@@ -1,8 +1,8 @@
-import { Project } from "@/types/Project"
-import { createClient, groq } from "next-sanity"
-import clientConfig from "./config/client-config"
-import { About } from "@/types/About"
-import { Skill } from "@/types/Skill"
+import { Project } from '@/types/Project'
+import { createClient, groq } from 'next-sanity'
+import clientConfig from './config/client-config'
+import { About } from '@/types/About'
+import { Skill } from '@/types/Skill'
 
 export const getProjects = async (): Promise<Project[]> => {
 	return createClient(clientConfig).fetch(
@@ -29,7 +29,8 @@ export const getProject = async (slug: string): Promise<Project> => {
       platform,
       'slug': slug.current,
       'image': image.asset->url,
-      url,
+      gitUrl,
+      youtubeUrl,
       content,
       'technologies': technology[]-> technology
     }`,

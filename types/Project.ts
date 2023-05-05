@@ -1,5 +1,5 @@
-import { PortableTextBlock } from "sanity"
-import { Technology } from "./Technology"
+import { PortableTextBlock } from 'sanity'
+import { Technology } from './Technology'
 
 export type Project = {
 	_id: string
@@ -10,7 +10,8 @@ export type Project = {
 	imageThumb: string
 	image: string
 	alt: string
-	url: string
+	gitUrl: string
+	youtubeUrl: string
 	technologies: []
 	content: PortableTextBlock[]
 }
