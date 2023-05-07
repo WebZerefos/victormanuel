@@ -52,7 +52,6 @@ const Home = async () => {
 								<p className='py-10 text-sm md:text-base'>
 									Aqui estão algumas das tecnologias que venho trabalhando e aprendendo:
 								</p>
-								s
 								<ul className='max-w-[500px] grid grid-cols-3 gap-2'>
 									<>
 										{skills.map((skill) => (
