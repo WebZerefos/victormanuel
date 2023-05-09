@@ -7,7 +7,7 @@ import { Skill } from '@/types/Skill'
 export const getProjects = async (): Promise<Project[]> => {
 	return createClient(clientConfig).fetch(
 		groq`
-    *[_type == 'project']{
+    *[_type == 'project'] | order(_createdAt desc){
       _id,
       _createdAt,
       name,
